@@ -16,7 +16,7 @@ function Challenge() {
         const fetchData = async () => {
             try {
                 // Make the API call
-                const response = await axios.get(`fod-dsa-backend.vercel.app/challenge/${challengeID}`);
+                const response = await axios.get(`https://fod-dsa-backend.vercel.app/challenge/${challengeID}`);
                 // Store the data in the state
                 setData(response.data);
                 console.log("Main data --> " , data);
