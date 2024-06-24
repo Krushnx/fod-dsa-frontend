@@ -39,7 +39,7 @@ function QuestionCard(props) {
         if (loggedIn) {
             setIsChecked(!isChecked);
             try {
-                await axios.put(`http://localhost:8000/challenge/${props.cID}/questions/${props.qID}/solve`, {
+                await axios.put(`fod-dsa-backend.vercel.app/challenge/${props.cID}/questions/${props.qID}/solve`, {
                     userId: user._id
                 });
     

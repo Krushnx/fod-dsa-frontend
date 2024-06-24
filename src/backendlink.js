@@ -1,4 +1,4 @@
 // const link = "https://trek-tide.onrender.com";
-const link = "http://localhost:8000";
+const link = "fod-dsa-backend.vercel.app";
 
 export default link;
