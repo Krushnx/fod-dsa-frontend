@@ -1,12 +1,14 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import QuestionCard from './question-card';
 import './challenge.css';
+import link from '../../../backendlink';
+import AuthContext, { AuthContextProvider } from '../../../context/authcontext';
 
 function Challenge() {
     const { challengeID } = useParams();
-
+    const { loggedIn ,user} = useContext(AuthContext);
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -16,7 +18,7 @@ function Challenge() {
         const fetchData = async () => {
             try {
                 // Make the API call
-                const response = await axios.get(`https://fod-dsa-backend.vercel.app/challenge/${challengeID}`);
+                const response = await axios.get(`${link}/challenge/${challengeID}`);
                 // Store the data in the state
                 setData(response.data);
                 console.log("Main data --> " , data);
@@ -45,6 +47,8 @@ function Challenge() {
             {!loading && data && (
                 <div className='list-question-card'>
                     <h1>{data.name}</h1>
+                    {data._id}
+                    {user._id}
                     {Object.entries(groupQuestionsBySection(data.questions)).map(([section, questions]) => (
                         <div key={section}>
                             <div className="space"></div>

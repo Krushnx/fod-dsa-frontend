@@ -30,7 +30,6 @@ function AuthContextProvider(props)
 
             const dataofuser = await userData.json();
             setUser(dataofuser);
-            // const userDataRes = await axios.get('https://fod-dsa-backend.vercel.app/auth/userdata');
             // setUser(userDataRes.data);
     
             // console.log("====->",dataofuser);
