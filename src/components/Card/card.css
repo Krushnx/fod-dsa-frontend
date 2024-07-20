@@ -1,11 +1,17 @@
 .card {
-  height: 320px;
+  height: 280px;
   /* border: 1px dotted yellow; */
-  width: 280px;
+  width: 300px;
   cursor: pointer;
   /* padding: 5px; */
-  border-radius: 30px;
-  background-color: rgb(39, 39, 39);
+  border-radius: 10px;
+  /* background-color: rgb(39, 39, 39); */
+  /* background-color:  linear-gradient(rgb(95, 54, 212) 0%, rgb(59, 1, 133) 100%); */
+  /* background: rgb(64,8,94);
+background: linear-gradient(149deg, rgba(64,8,94,1) 15%, rgba(116,0,245,1) 68%); */
+
+background: linear-gradient(144deg,#af40ff,#5b42f3 50%,#00ddeb);
+
   box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
      0 0 0 1px hsla(0, 0%, 0%, 0.05),
     0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
@@ -13,9 +19,9 @@
 }
 a{text-decoration: none;}
 .card-1 {
-  height: 210px;
-  width: 280px;
-  background-image: url("https://assets.leetcode.com/explore/cards/system-design-for-interviews-and-beyond/img-1676672273.png");
+  height: 170px;
+  width: 300px;
+  /* background-image: url("https://assets.leetcode.com/explore/cards/system-design-for-interviews-and-beyond/img-1676672273.png"); */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -26,11 +32,12 @@ a{text-decoration: none;}
 }
 
 .card-2 {
-  height: 90px;
+  height: 80px;
   /* border: 1px dotted red; */
-  width: 280px;
+  width: 300px;
   display: flex;
   justify-content: space-around;
+  border-top: 2px solid white;
 }
 
 .card-details {

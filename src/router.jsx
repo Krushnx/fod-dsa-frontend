@@ -6,6 +6,7 @@ import Register from './components/auth/register';
 import Login from './components/auth/login';
 import Challenge from './components/Card/Challenge/challenge';
 import Navbar from './components/Home/Navbar';
+import Payment from './components/Payment/Payment';
 
 
 
@@ -22,6 +23,7 @@ function MyRouter() {
             <Routes>
 
             <Route exact path='/' element={<Home />} />
+            <Route exact path='/payment' element={<Payment />} />
          
             { loggedIn === false && <>
             <Route path="/register" element={<Register />} />
