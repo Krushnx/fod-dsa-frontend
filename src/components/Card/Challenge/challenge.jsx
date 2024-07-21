@@ -46,14 +46,15 @@ function Challenge() {
         <div>
             {!loading && data && (
                 <div className='list-question-card'>
-                    <h1>{data.name}</h1>
-                    {data._id}
-                    {user._id}
+                    <h1 className='text-[35px] mt-10 font-bold font-raleway'>{data.name}</h1>
+                    
                     {Object.entries(groupQuestionsBySection(data.questions)).map(([section, questions]) => (
                         <div key={section}>
                             <div className="space"></div>
-                            <h2 className='Heading'>◉ {section}</h2>
+                            <h2 className='Heading'>{section}</h2>
                             {questions.map((items, index) => (
+                                <div className='mt-2'>
+
                                 <QuestionCard
                                     key={items._id}
                                     serialNumber={index + 1}
@@ -65,7 +66,11 @@ function Challenge() {
                                     qID = {items._id}
                                     cID = {challengeID}
                                     statusArray = {items.solvedBy}
-                                />
+                                    />
+                                    {/* <hr class="h-px  bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
+   
+                                    </div>
+
                             ))}
                         </div>
                     ))}

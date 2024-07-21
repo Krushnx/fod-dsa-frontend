@@ -5,7 +5,8 @@ import AuthContext from '../../../context/authcontext';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import link from '../../../backendlink';
-
+import code from './Coding (AI style).png'
+import solution from './Coding.png'
 function QuestionCard(props) {
 
     const classname = 'level ' + 'level-' + props.level;
@@ -49,7 +50,7 @@ function QuestionCard(props) {
     };
 
     return (
-        <div className="question-card">
+        <div className="question-card bg-customGray">
             <div className="status">
                 <div className="checkbox-wrapper-31">
                     <input type="checkbox" checked={isChecked} onClick={handleStatusChange} readOnly />
@@ -60,13 +61,14 @@ function QuestionCard(props) {
                     </svg>
                 </div>
             </div>
-            <h2>{props.serialNumber}. &nbsp;{props.name}</h2>
+            <h2 className='text-black text-[20px] font-bold'>{props.serialNumber}. &nbsp;{props.name}</h2>
             <div className="question-links">
                 <div className={classname}>{props.level}</div>
-                <a href={props.gfg} target='_unset'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/GeeksforGeeks.svg/2560px-GeeksforGeeks.svg.png" alt="gfg" /></a>
-                <a href={props.leetcode} target='_unset'><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/LeetCode_Logo_1.png" alt="Leetcode" /></a>
-                <a href={props.solution} target='_unset'><img src="https://cdn-icons-png.flaticon.com/512/4727/4727543.png" alt="Solution" /></a>
+                {/* <a href={props.gfg} target='_unset'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/GeeksforGeeks.svg/2560px-GeeksforGeeks.svg.png" alt="gfg" /></a> */}
+                <a href={props.leetcode} target='_unset'><img src={code} alt="Leetcode" /></a>
+                <a href={props.solution} className='solution' target='_unset'><img src={solution} alt="Solution" /></a>
             </div>
+            
         </div>
     );
 }

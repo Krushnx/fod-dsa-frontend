@@ -3,6 +3,9 @@ import Navbar from './Navbar';
 import axios from 'axios';
 import Card from '../Card/Card';
 import link from '../../backendlink';
+import Test from './Test';
+import ChallengeCard from './Test';
+import Hero from './Hero';
 function Home()
 {
 
@@ -32,13 +35,18 @@ function Home()
 
     return(
       <div>
-     
-      <div className="carddiv">
+        <div className='bg-black'>
+
+      <Hero />
+        </div>
+      <div className="carddiv" id='challenge'>
         {loading ? (
           <p>Loading...</p>
         ) : (
           data && data.map(item => (
-            <Card key={item.name} name={item.name} sections={item.sections} questions={item.questionCount} link={item._id} />
+            // <Card key={item.name} name={item.name} sections={item.sections} questions={item.questionCount} link={item._id} />
+            <ChallengeCard title={item.name} sections={item.sections} questions={item.questionCount} link={item._id} imageSrc={item.imageSrc} description={item.desc}/>
+            // <p>hiii</p>
           ))
         )}
       </div>

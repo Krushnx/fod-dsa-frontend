@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px;
+    padding: 25px;
 }
 a{text-decoration: none; color: white;}
 
@@ -13,10 +13,19 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(48, 47, 47);
-    color: white;
+    /* background-color: rgb(48, 47, 47); */
+    /* color: white; */
+    scroll-behavior: smooth;
 }
 
+.navlink{
+  transition: 0.2s;
+}
+
+.navlink:hover{
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 1) ;
+
+}
 .carddiv
 {
     display: grid;
